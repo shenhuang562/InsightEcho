@@ -1,7 +1,7 @@
 package main.java.com.InsightEcho.utils;
 
-import lombok.extern.slf4j.Slf4j;  // Lombok 注解，用于自动在类中注入一个日志记录器 (log)。
-import org.springframework.beans.BeanUtils;  // Spring Framework 提供的工具类，用于在 JavaBean 之间复制属性值。
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.BeanUtils;
 
 import java.util.ArrayList;
 import java.util.List;
