@@ -12,7 +12,7 @@
         <relativePath/>
     </parent>
 
-    <groupId>com.ican</groupId>
+    <groupId>com.InsightEcho</groupId>
     <artifactId>blog-springboot</artifactId>
     <version>2.0</version>
     <name>blog</name>
@@ -120,6 +120,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.31</version>
             <scope>runtime</scope>
         </dependency>
         <!-- redis -->

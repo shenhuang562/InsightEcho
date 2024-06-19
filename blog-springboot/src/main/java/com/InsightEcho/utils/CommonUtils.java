@@ -1,4 +1,4 @@
-package com.InsightEcho.utils;
+package main.java.com.InsightEcho.utils;
 
 import java.util.ArrayList;
 import java.util.List;
