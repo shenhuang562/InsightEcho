@@ -229,6 +229,9 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.InsightEcho.BlogApplication</mainClass>
+                </configuration>
             </plugin>
         </plugins>
     </build>
