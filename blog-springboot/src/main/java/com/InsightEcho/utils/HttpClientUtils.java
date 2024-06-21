@@ -22,7 +22,7 @@ import java.util.Map;
 /**
  * ClassName:HttpClientUtils
  * Package:main.java.com.InsightEcho.utils
- * Description:
+ * Description:HttpClient工具类
  *
  * @Author:mind-king
  * @Create:2024/6/19 - 下午8:23

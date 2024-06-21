@@ -14,7 +14,7 @@ import java.net.UnknownHostException;
 /**
  * ClassName: IpUtils
  * Package: main.java.com.InsightEcho.utils
- * Description:
+ * Description:IP地址工具类
  *
  * @Author: mind-king
  * @Create: 2024/6/19 - 下午8:58

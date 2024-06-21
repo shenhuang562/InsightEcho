@@ -6,7 +6,7 @@ import lombok.Getter;
 /**
  * ClassName:StatusCodeEnum
  * Package:main.java.com.InsightEcho.enums
- * Description:
+ * Description:状态码枚举
  *
  * @Author:mind-king
  * @Create:2024/6/20 - 上午12:21

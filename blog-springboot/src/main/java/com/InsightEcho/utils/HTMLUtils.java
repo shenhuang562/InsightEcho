@@ -5,7 +5,7 @@ import com.github.houbb.sensitive.word.bs.SensitiveWordBs;
 /**
  * ClassName:HTMLUtils
  * Package:main.java.com.InsightEcho.utils
- * Description:
+ * Description:HTML工具
  *
  * @Author:mind-king
  * @Create:2024/6/19 - 下午7:23
