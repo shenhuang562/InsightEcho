@@ -1,4 +1,4 @@
-package main.java.com.InsightEcho.utils;
+package com.InsightEcho.utils;
 
 import cn.dev33.satoken.secure.SaSecureUtil;
 import org.apache.commons.lang3.StringUtils;

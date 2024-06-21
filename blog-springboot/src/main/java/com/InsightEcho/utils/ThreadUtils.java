@@ -1,4 +1,4 @@
-package main.java.com.InsightEcho.utils;
+package com.InsightEcho.utils;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

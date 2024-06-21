@@ -1,4 +1,4 @@
-package main.java.com.InsightEcho.utils;
+package com.InsightEcho.utils;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 

@@ -1,4 +1,4 @@
-package main.java.com.InsightEcho.enums;
+package com.InsightEcho.enums;
 
 /**
  * ClassName:DesensitizationTypeEnum

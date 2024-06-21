@@ -1,4 +1,4 @@
-package main.java.com.InsightEcho.utils;
+package com.InsightEcho.utils;
 
 import com.github.houbb.sensitive.word.bs.SensitiveWordBs;
 

@@ -1,8 +1,8 @@
-package main.java.com.InsightEcho.exception;
+package com.InsightEcho.exception;
 
 import lombok.Getter;
 
-import static main.java.com.InsightEcho.enums.StatusCodeEnum.FAIL;
+import static com.InsightEcho.enums.StatusCodeEnum.FAIL;
 
 /**
  * ClassName:ServiceException

@@ -1,4 +1,4 @@
-package main.java.com.InsightEcho.utils;
+package com.InsightEcho.utils;
 
 import nl.basjes.parse.useragent.UserAgent;
 import nl.basjes.parse.useragent.UserAgentAnalyzer;
