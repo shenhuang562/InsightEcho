@@ -3,42 +3,43 @@ package com.InsightEcho.config.properties;
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
+
 /**
- * ClassName:CosProperties
+ * ClassName:OssProperties
  * Package:com.InsightEcho.config.properties
- * Description:cos配置属性
+ * Description:oss配置属性
  *
  * @Author:mind-king
- * @Create:2024/6/21 - 下午5:00
+ * @Create:2024/6/21 - 下午5:07
  * @Version:v1.0
  */
 @Data
 @Configuration
-@ConfigurationProperties(prefix = "upload.cos")
-public class CosProperties {
+@ConfigurationProperties(prefix = "upload.oss")
+public class OssProperties {
 
     /**
-     * cos域名
+     * oss域名
      */
     private String url;
 
     /**
+     * 终点
+     */
+    private String endpoint;
+
+    /**
      * 访问密钥id
      */
-    private String secretId;
+    private String accessKeyId;
 
     /**
      * 访问密钥密码
      */
-    private String secretKey;
+    private String accessKeySecret;
 
     /**
-     * 所属区域
-     */
-    private String region;
-
-    /**
-     * 存储桶名称
+     * bucket名称
      */
     private String bucketName;
 }
