@@ -1,15 +1,15 @@
 package com.InsightEcho.constant;
 
 /**
- * ClassName:OptTpyeConstant
+ * ClassName:OptTypeConstant
  * Package:com.InsightEcho.constant
  * Description:日志操作类型常量
  *
  * @Author:mind-king
- * @Create:2024/6/21 - 下午4:23
+ * @Create:2024/7/1 - 下午7:39
  * @Version:v1.0
  */
-public class OptTpyeConstant {
+public class OptTypeConstant {
 
     /**
      * 添加
@@ -35,4 +35,5 @@ public class OptTpyeConstant {
      * 下线
      */
     public static final String KICK = "下线";
+
 }

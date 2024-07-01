@@ -27,6 +27,10 @@ public @interface Desensitization {
      */
     DesensitizationTypeEnum type() default DesensitizationTypeEnum.MY_RULE;
 
+    Class<?>[] groups();
+
+    Class<?>[] payload();
+
     /**
      * 脱敏开始位置（包含）
      */
