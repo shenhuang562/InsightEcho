@@ -18,7 +18,7 @@ public enum ZoneEnum {
     /**
      * 武汉
      */
-    SHANGHAI("Asia/Wuhai", "中国武汉");
+    SHANGHAI("Asia/Shanghai", "中国上海");
 
     /**
      * 时区
