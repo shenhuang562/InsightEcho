@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/InsightEcho.iml" filepath="$PROJECT_DIR$/.idea/InsightEcho.iml" />
+      <module fileurl="file://$PROJECT_DIR$/blog-springboot/src/blog-springboot.iml" filepath="$PROJECT_DIR$/blog-springboot/src/blog-springboot.iml" />
     </modules>
   </component>
 </project>
