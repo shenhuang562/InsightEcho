@@ -5,8 +5,7 @@ import com.example.InsightEcho.entity.Article;
 import com.example.InsightEcho.query.ArticleConditionQuery;
 import com.example.InsightEcho.query.ArticleQuery;
 import com.example.InsightEcho.query.PageQuery;
-import com.example.InsightEcho.response.ArchiveResp;
-import com.example.InsightEcho.response.ArticleStatisticsResp;
+import com.example.InsightEcho.response.*;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import java.util.List;
@@ -15,7 +14,7 @@ import java.util.List;
 @Mapper
 public interface ArticleMapper extends BaseMapper<Article> {
     /**
-     * 查询符合条件的后台文章数量
+     * 查询后台文章数量
      *
      * @param articleQuery 文章查询条件
      * @return 文章数量
@@ -23,12 +22,12 @@ public interface ArticleMapper extends BaseMapper<Article> {
     Long selectBackArticleCount(@Param("param") ArticleQuery articleQuery);
 
     /**
-     * 查询符合条件的后台文章列表
+     * 查询后台文章列表
      *
      * @param articleQuery 文章查询条件
      * @return 后台文章列表
      */
-    List<Article> selectBackArticleList(@Param("param") ArticleQuery articleQuery);
+    List<ArticleBackResp> selectBackArticleList(@Param("param") ArticleQuery articleQuery);
 
     /**
      * 根据id查询文章信息
@@ -36,22 +35,23 @@ public interface ArticleMapper extends BaseMapper<Article> {
      * @param articleId 文章id
      * @return 文章信息
      */
-    Article selectArticleInfoById(@Param("articleId") Integer articleId);
+    ArticleInfoResp selectArticleInfoById(@Param("articleId") Integer articleId);
+
     /**
      * 文章搜索
      *
      * @param keyword 关键字
      * @return 文章列表
      */
-    List<Article> searchArticle(@Param("keyword") String keyword);
+    List<ArticleSearchResp> searchArticle(@Param("keyword") String keyword);
 
     /**
-     * 查询对应页文章
+     * 查询首页文章
      *
      * @param pageQuery 分页条件
-     * @return 对应页文章
+     * @return 首页文章
      */
-    List<Article> selectArticleHomeList(@Param("param") PageQuery pageQuery);
+    List<ArticleHomeResp> selectArticleHomeList(@Param("param") PageQuery pageQuery);
 
     /**
      * 根据id查询首页文章
@@ -59,7 +59,7 @@ public interface ArticleMapper extends BaseMapper<Article> {
      * @param articleId 文章id
      * @return 首页文章
      */
-    Article selectArticleHomeById(Integer articleId);
+    ArticleResp selectArticleHomeById(Integer articleId);
 
     /**
      * 查询上一篇文章
@@ -67,7 +67,7 @@ public interface ArticleMapper extends BaseMapper<Article> {
      * @param articleId 文章id
      * @return 上一篇文章
      */
-    Article selectLastArticle(Integer articleId);
+    ArticlePaginationResp selectLastArticle(Integer articleId);
 
     /**
      * 查询下一篇文章
@@ -75,7 +75,7 @@ public interface ArticleMapper extends BaseMapper<Article> {
      * @param articleId 文章id
      * @return 下一篇文章
      */
-    Article selectNextArticle(Integer articleId);
+    ArticlePaginationResp selectNextArticle(Integer articleId);
 
     /**
      * 查询文章归档
@@ -97,7 +97,7 @@ public interface ArticleMapper extends BaseMapper<Article> {
      *
      * @return 推荐文章
      */
-    List<Article> selectArticleRecommend();
+    List<ArticleRecommendResp> selectArticleRecommend();
 
     /**
      * 根据条件查询文章
@@ -105,5 +105,5 @@ public interface ArticleMapper extends BaseMapper<Article> {
      * @param articleConditionQuery 查询条件
      * @return 文章列表
      */
-    List<Article> selectArticleListByCondition(@Param("param") ArticleConditionQuery articleConditionQuery);
+    List<ArticleConditionResp> selectArticleListByCondition(@Param("param") ArticleConditionQuery articleConditionQuery);
 }

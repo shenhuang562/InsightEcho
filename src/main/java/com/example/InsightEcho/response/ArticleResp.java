@@ -1,27 +1,18 @@
 package com.example.InsightEcho.response;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
 @Data
-
-public class ArticleInfoResp {
+public class ArticleResp {
 
     /**
      * 文章id
      */
     
     private Integer id;
-
-    /**
-     * 分类id
-     */
-    @JsonIgnore
-    private Integer categoryId;
 
     /**
      * 文章缩略图
@@ -36,12 +27,6 @@ public class ArticleInfoResp {
     private String articleTitle;
 
     /**
-     * 文章概要
-     */
-    
-    private String articleDesc;
-
-    /**
      * 文章内容
      */
     
@@ -54,32 +39,50 @@ public class ArticleInfoResp {
     private Integer articleType;
 
     /**
-     * 是否置顶 (0否 1是)
+     * 浏览量
      */
     
-    private Integer isTop;
+    private Integer viewCount;
 
     /**
-     * 是否推荐 (0否 1是)
+     * 点赞量
      */
     
-    private Integer isRecommend;
+    private Integer likeCount;
 
     /**
-     * 状态 (1公开 2私密 3草稿)
+     * 文章分类
      */
     
-    private Integer status;
+    private CategoryOptionResp category;
 
     /**
-     * 文章分类名
+     * 文章标签
      */
     
-    private String categoryName;
+    private List<TagOptionResp> tagVOList;
 
     /**
-     * 文章标签名
+     * 上一篇文章
      */
     
-    private List<String> tagNameList;
+    private ArticlePaginationResp lastArticle;
+
+    /**
+     * 下一篇文章
+     */
+    
+    private ArticlePaginationResp nextArticle;
+
+    /**
+     * 发表时间
+     */
+    
+    private LocalDateTime createTime;
+
+    /**
+     * 更新时间
+     */
+    
+    private LocalDateTime updateTime;
 }
