@@ -1,12 +1,12 @@
-package com.example.InsightEcho.mapper;
+package com.InsightEcho.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.example.InsightEcho.entity.Menu;
-import com.example.InsightEcho.query.MenuQuery;
-import com.example.InsightEcho.response.MenuOptionResp;
-import com.example.InsightEcho.response.MenuResp;
-import com.example.InsightEcho.response.MenuTreeResp;
-import com.example.InsightEcho.response.UserMenuResp;
+import com.InsightEcho.entity.Menu;
+import com.InsightEcho.query.MenuQuery;
+import com.InsightEcho.response.MenuOptionResp;
+import com.InsightEcho.response.MenuResp;
+import com.InsightEcho.response.MenuTreeResp;
+import com.InsightEcho.response.UserMenuResp;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 

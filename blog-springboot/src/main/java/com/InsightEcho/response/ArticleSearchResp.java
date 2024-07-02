@@ -1,4 +1,4 @@
-package com.example.InsightEcho.response;
+package com.InsightEcho.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

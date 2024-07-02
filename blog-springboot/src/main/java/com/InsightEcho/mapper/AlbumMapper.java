@@ -1,6 +1,6 @@
-package com.example.InsightEcho.mapper;
+package com.InsightEcho.mapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.example.InsightEcho.entity.Album;
+import com.InsightEcho.entity.Album;
 import org.apache.ibatis.annotations.Mapper;
 
 /**

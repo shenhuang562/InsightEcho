@@ -1,11 +1,11 @@
-package com.example.InsightEcho.mapper;
+package com.InsightEcho.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.example.InsightEcho.entity.Article;
-import com.example.InsightEcho.query.ArticleConditionQuery;
-import com.example.InsightEcho.query.ArticleQuery;
-import com.example.InsightEcho.query.PageQuery;
-import com.example.InsightEcho.response.*;
+import com.InsightEcho.entity.Article;
+import com.InsightEcho.query.ArticleConditionQuery;
+import com.InsightEcho.query.ArticleQuery;
+import com.InsightEcho.query.PageQuery;
+import com.InsightEcho.response.*;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import java.util.List;

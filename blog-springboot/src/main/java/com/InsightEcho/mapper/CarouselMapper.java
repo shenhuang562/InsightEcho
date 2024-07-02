@@ -1,7 +1,7 @@
-package com.example.InsightEcho.mapper;
+package com.InsightEcho.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.example.InsightEcho.entity.Carousel;
+import com.InsightEcho.entity.Carousel;
 
 public interface CarouselMapper extends BaseMapper<Carousel> {
 }

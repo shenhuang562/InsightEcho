@@ -1,4 +1,4 @@
-package com.example.InsightEcho.response;
+package com.InsightEcho.response;
 
 public class TagOptionResp {
 }

@@ -1,5 +1,5 @@
-package com.example.InsightEcho.query;
-import com.example.InsightEcho.constant.PageConstant;
+package com.InsightEcho.query;
+import com.InsightEcho.constant.PageConstant;
 import lombok.Data;
 
 @Data

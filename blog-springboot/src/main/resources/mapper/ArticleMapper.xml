@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.example.InsightEcho.mapper.ArticleMapper">
-    <resultMap id="articleBackVO" type="com.example.InsightEcho.response.ArticleBackResp">
+<mapper namespace="com.InsightEcho.mapper.ArticleMapper">
+    <resultMap id="articleBackVO" type="com.InsightEcho.response.ArticleBackResp">
         <id column="id" property="id"/>
         <result column="article_cover" property="articleCover"/>
         <result column="article_title" property="articleTitle"/>
@@ -13,30 +13,30 @@
         <result column="is_delete" property="isDelete"/>
         <result column="status" property="status"/>
         <result column="create_time" property="createTime"/>
-        <collection property="tagVOList" ofType="com.example.InsightEcho.response.TagOptionResp">
+        <collection property="tagVOList" ofType="com.InsightEcho.response.TagOptionResp">
             <id column="tag_id" property="id"/>
             <result column="tag_name" property="tagName"/>
         </collection>
     </resultMap>
 
-    <resultMap id="articleHomeVO" type="com.example.InsightEcho.response.ArticleHomeResp">
+    <resultMap id="articleHomeVO" type="com.InsightEcho.response.ArticleHomeResp">
         <id column="id" property="id"/>
         <result column="article_cover" property="articleCover"/>
         <result column="article_title" property="articleTitle"/>
         <result column="article_desc" property="articleDesc"/>
         <result column="is_top" property="isTop"/>
         <result column="create_time" property="createTime"/>
-        <association property="category" javaType="com.example.InsightEcho.response.CategoryOptionResp">
+        <association property="category" javaType="com.InsightEcho.response.CategoryOptionResp">
             <id column="category_id" property="id"/>
             <result column="category_name" property="categoryName"/>
         </association>
-        <collection property="tagVOList" ofType="com.example.InsightEcho.response.TagOptionResp">
+        <collection property="tagVOList" ofType="com.InsightEcho.response.TagOptionResp">
             <id column="tag_id" property="id"/>
             <result column="tag_name" property="tagName"/>
         </collection>
     </resultMap>
 
-    <resultMap id="articleVO" type="com.example.InsightEcho.response.ArticleResp">
+    <resultMap id="articleVO" type="com.InsightEcho.response.ArticleResp">
         <id column="id" property="id"/>
         <result column="article_cover" property="articleCover"/>
         <result column="article_title" property="articleTitle"/>
@@ -44,26 +44,26 @@
         <result column="article_type" property="articleType"/>
         <result column="create_time" property="createTime"/>
         <result column="update_time" property="updateTime"/>
-        <association property="category" javaType="com.example.InsightEcho.response.CategoryOptionResp">
+        <association property="category" javaType="com.InsightEcho.response.CategoryOptionResp">
             <id column="category_id" property="id"/>
             <result column="category_name" property="categoryName"/>
         </association>
-        <collection property="tagVOList" ofType="com.example.InsightEcho.response.TagOptionResp">
+        <collection property="tagVOList" ofType="com.InsightEcho.response.TagOptionResp">
             <id column="tag_id" property="id"/>
             <result column="tag_name" property="tagName"/>
         </collection>
     </resultMap>
 
-    <resultMap id="articleConditionVO" type="com.example.InsightEcho.response.ArticleConditionResp">
+    <resultMap id="articleConditionVO" type="com.InsightEcho.response.ArticleConditionResp">
         <id column="id" property="id"/>
         <result column="article_cover" property="articleCover"/>
         <result column="article_title" property="articleTitle"/>
         <result column="create_time" property="createTime"/>
-        <association property="category" javaType="com.example.InsightEcho.response.CategoryOptionResp">
+        <association property="category" javaType="com.InsightEcho.response.CategoryOptionResp">
             <id column="category_id" property="id"/>
             <result column="category_name" property="categoryName"/>
         </association>
-        <collection property="tagVOList" ofType="com.example.InsightEcho.response.TagOptionResp">
+        <collection property="tagVOList" ofType="com.InsightEcho.response.TagOptionResp">
             <id column="tag_id" property="id"/>
             <result column="tag_name" property="tagName"/>
         </collection>
@@ -153,7 +153,7 @@
         LEFT JOIN t_tag t ON t.id = tat.tag_id
     </select>
 
-    <select id="selectArticleInfoById" resultType="com.example.InsightEcho.response.ArticleInfoResp">
+    <select id="selectArticleInfoById" resultType="com.InsightEcho.response.ArticleInfoResp">
         select id,
                category_id,
                article_cover,
@@ -168,7 +168,7 @@
         where id = #{articleId}
     </select>
 
-    <select id="searchArticle" resultType="com.example.InsightEcho.response.ArticleSearchResp">
+    <select id="searchArticle" resultType="com.InsightEcho.response.ArticleSearchResp">
         SELECT id,
         article_title,
         article_content,
@@ -237,7 +237,7 @@
           AND a.id = #{articleId}
     </select>
 
-    <select id="selectLastArticle" resultType="com.example.InsightEcho.response.ArticlePaginationResp">
+    <select id="selectLastArticle" resultType="com.InsightEcho.response.ArticlePaginationResp">
         SELECT id, article_cover, article_title
         FROM t_article
         WHERE is_delete = 0
@@ -246,7 +246,7 @@
         ORDER BY id DESC LIMIT 1
     </select>
 
-    <select id="selectNextArticle" resultType="com.example.InsightEcho.response.ArticlePaginationResp">
+    <select id="selectNextArticle" resultType="com.InsightEcho.response.ArticlePaginationResp">
         SELECT id, article_cover, article_title
         FROM t_article
         WHERE is_delete = 0
@@ -255,7 +255,7 @@
         ORDER BY id ASC LIMIT 1
     </select>
 
-    <select id="selectArchiveList" resultType="com.example.InsightEcho.response.ArchiveResp">
+    <select id="selectArchiveList" resultType="com.InsightEcho.response.ArchiveResp">
         select id, article_title, article_cover, create_time
         from t_article
         where is_delete = 0
@@ -264,7 +264,7 @@
             LIMIT #{param.current}, #{param.size}
     </select>
 
-    <select id="selectArticleStatistics" resultType="com.example.InsightEcho.response.ArticleStatisticsResp">
+    <select id="selectArticleStatistics" resultType="com.InsightEcho.response.ArticleStatisticsResp">
         SELECT DATE_FORMAT(create_time, "%Y-%m-%d") AS date,
                COUNT(*)                             AS count
         FROM t_article
@@ -272,7 +272,7 @@
         ORDER BY date DESC
     </select>
 
-    <select id="selectArticleRecommend" resultType="com.example.InsightEcho.response.ArticleRecommendResp">
+    <select id="selectArticleRecommend" resultType="com.InsightEcho.response.ArticleRecommendResp">
         SELECT id,
                article_title,
                article_cover,

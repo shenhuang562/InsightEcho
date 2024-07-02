@@ -1,7 +1,7 @@
-package com.example.InsightEcho.mapper;
+package com.InsightEcho.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.example.InsightEcho.entity.Tag;
+import com.InsightEcho.entity.Tag;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper

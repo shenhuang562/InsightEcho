@@ -1,4 +1,4 @@
-package com.example.InsightEcho.response;
+package com.InsightEcho.response;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;

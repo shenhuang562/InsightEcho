@@ -1,4 +1,4 @@
-package com.example.InsightEcho.constant;
+package com.InsightEcho.constant;
 
 public class PageConstant {
 

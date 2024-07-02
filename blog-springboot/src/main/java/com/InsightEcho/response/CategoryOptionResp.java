@@ -1,8 +1,8 @@
-package com.example.InsightEcho.response;
+package com.InsightEcho.response;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import com.example.InsightEcho.response.CategoryResp;
+import com.InsightEcho.response.CategoryResp;
 import java.time.LocalDateTime;
 
 @Data

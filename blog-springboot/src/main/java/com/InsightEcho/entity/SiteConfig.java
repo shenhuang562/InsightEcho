@@ -1,4 +1,4 @@
-package com.example.InsightEcho.entity;
+package com.InsightEcho.entity;
 
 import com.baomidou.mybatisplus.annotation.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;

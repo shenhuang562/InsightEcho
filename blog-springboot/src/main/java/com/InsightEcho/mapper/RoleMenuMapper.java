@@ -1,7 +1,7 @@
-package com.example.InsightEcho.mapper;
+package com.InsightEcho.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.example.InsightEcho.entity.RoleMenu;
+import com.InsightEcho.entity.RoleMenu;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper

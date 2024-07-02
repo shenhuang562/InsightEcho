@@ -1,4 +1,4 @@
-package com.example.InsightEcho.query;
+package com.InsightEcho.query;
 
 public class ArticleQuery {
 }
