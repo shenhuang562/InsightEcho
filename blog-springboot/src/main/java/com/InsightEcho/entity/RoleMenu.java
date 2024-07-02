@@ -1,24 +1,18 @@
-package com.InsightEcho.entity;
+package com.example.InsightEcho.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-/**
- * ClassName:RoleMenu
- * Package:com.InsightEcho.entity
- * Description:角色菜单
- *
- * @Author:mind-king
- * @Create:2024/6/30 - 下午11:38
- * @Version:v1.0
- */
+
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@TableName("t_role_menu")
 public class RoleMenu {
 
     /**
@@ -36,4 +30,5 @@ public class RoleMenu {
      * 菜单id
      */
     private Integer menuId;
+
 }

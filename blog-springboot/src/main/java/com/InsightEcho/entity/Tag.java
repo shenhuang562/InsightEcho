@@ -1,28 +1,18 @@
-package com.InsightEcho.entity;
+package com.example.InsightEcho.entity;
 
-import com.baomidou.mybatisplus.annotation.FieldFill;
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
-/**
- * ClassName:Tag
- * Package:com.InsightEcho.entity
- * Description:标签
- *
- * @Author:mind-king
- * @Create:2024/6/30 - 下午11:45
- * @Version:v1.0
- */
+
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@TableName("t_tag")
 public class Tag {
 
     /**
@@ -47,4 +37,5 @@ public class Tag {
      */
     @TableField(fill = FieldFill.UPDATE)
     private LocalDateTime updateTime;
+
 }

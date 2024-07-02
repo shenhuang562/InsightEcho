@@ -1,28 +1,18 @@
-package com.InsightEcho.entity;
+package com.example.InsightEcho.entity;
 
-import com.baomidou.mybatisplus.annotation.FieldFill;
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
-/**
- * ClassName:Task
- * Package:com.InsightEcho.entity
- * Description:定时任务
- *
- * @Author:mind-king
- * @Create:2024/6/30 - 下午11:46
- * @Version:v1.0
- */
+
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@TableName("t_task")
 public class Task {
 
     /**
@@ -82,4 +72,5 @@ public class Task {
      */
     @TableField(fill = FieldFill.UPDATE)
     private LocalDateTime updateTime;
+
 }

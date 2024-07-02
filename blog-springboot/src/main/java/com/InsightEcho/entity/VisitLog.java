@@ -1,22 +1,12 @@
-package com.InsightEcho.entity;
+package com.example.InsightEcho.entity;
 
-import com.baomidou.mybatisplus.annotation.FieldFill;
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.*;
 import lombok.Data;
 
 import java.time.LocalDateTime;
-/**
- * ClassName:VisitLog
- * Package:com.InsightEcho.entity
- * Description:访问日志
- *
- * @Author:mind-king
- * @Create:2024/6/30 - 下午11:50
- * @Version:v1.0
- */
+
 @Data
+@TableName("t_visit_log")
 public class VisitLog {
     /**
      * id

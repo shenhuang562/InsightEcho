@@ -1,26 +1,14 @@
-package com.InsightEcho.entity;
+package com.example.InsightEcho.entity;
 
-
-import com.baomidou.mybatisplus.annotation.FieldFill;
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.*;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import java.time.LocalDateTime;
-/**
- * ClassName:SiteConfig
- * Package:com.InsightEcho.entity
- * Description:网站配置
- *
- * @Author:mind-king
- * @Create:2024/6/30 - 下午11:40
- * @Version:v1.0
- */
-@Data
-public class SiteConfig {
 
+@Data
+@TableName("t_site_config")
+public class SiteConfig {
     /**
      * 主键
      */
@@ -61,6 +49,11 @@ public class SiteConfig {
      * 建站日期
      */
     private String createSiteTime;
+
+    /**
+     * 备案号
+     */
+    private String recordNumber;
 
     /**
      * 作者头像
@@ -113,6 +106,21 @@ public class SiteConfig {
     private Integer messageCheck;
 
     /**
+     * 是否开启打赏 (0否 1是)
+     */
+    private Integer isReward;
+
+    /**
+     * 微信二维码
+     */
+    private String weiXinCode;
+
+    /**
+     * 支付宝二维码
+     */
+    private String aliCode;
+
+    /**
      * 是否邮箱通知 (0否 1是)
      */
     private Integer emailNotice;
@@ -160,4 +168,5 @@ public class SiteConfig {
     @JsonIgnore
     @TableField(fill = FieldFill.UPDATE)
     private LocalDateTime updateTime;
+
 }
