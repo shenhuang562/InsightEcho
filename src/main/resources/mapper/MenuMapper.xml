@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.test.mapper.MenuMapper">
+<mapper namespace="com.example.InsightEcho.mapper.MenuMapper">
 
     <select id="selectPermissionByRoleId" resultType="java.lang.String">
         SELECT DISTINCT m.perms
@@ -10,7 +10,7 @@
           AND m.is_disable = 0
     </select>
 
-    <select id="selectMenuVOList" resultType="com.ican.model.vo.response.MenuResp">
+    <select id="selectMenuVOList" resultType="com.example.InsightEcho.response.MenuOptionResp">
         SELECT id,
         parent_id,
         menu_type,
@@ -35,7 +35,7 @@
         order by order_num
     </select>
 
-    <select id="selectMenuByUserId" resultType="com.ican.model.vo.response.UserMenuResp">
+    <select id="selectMenuByUserId" resultType="com.example.InsightEcho.response.UserMenuResp">
         SELECT DISTINCT m.id,
                         m.parent_id,
                         m.menu_name,
@@ -56,7 +56,7 @@
         ORDER BY m.parent_id, m.order_num
     </select>
 
-    <select id="selectMenuTree" resultType="com.ican.model.vo.response.MenuTreeResp">
+    <select id="selectMenuTree" resultType="com.example.InsightEcho.response.MenuTreeResp">
         SELECT id,
                parent_id,
                menu_name as label
@@ -65,7 +65,7 @@
         ORDER BY order_num
     </select>
 
-    <select id="selectMenuOptions" resultType="com.ican.model.vo.response.MenuOptionResp">
+    <select id="selectMenuOptions" resultType="com.example.InsightEcho.response.MenuOptionResp">
         SELECT id        as `value`,
                parent_id,
                menu_name as label
@@ -75,7 +75,7 @@
         ORDER BY order_num
     </select>
 
-    <select id="selectMenuById" resultType="com.ican.model.vo.request.MenuReq">
+    <select id="selectMenuById" resultType="com.example.InsightEcho.response.MenuResp">
         SELECT id,
                parent_id,
                menu_type,
