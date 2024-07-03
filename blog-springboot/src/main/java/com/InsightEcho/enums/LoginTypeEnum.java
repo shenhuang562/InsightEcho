@@ -27,11 +27,6 @@ public enum LoginTypeEnum {
     QQ(2, "QQ登录", "qqLoginStrategyImpl"),
 
     /**
-     * Gitee
-     */
-    GITEE(3, "Gitee登录", "giteeLoginStrategyImpl"),
-
-    /**
      * Github
      */
     GITHUB(4, "Github登录", "githubLoginStrategyImpl");

@@ -2,17 +2,26 @@ package com.InsightEcho.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.InsightEcho.entity.Menu;
-import com.InsightEcho.query.MenuQuery;
-import com.InsightEcho.response.MenuOptionResp;
-import com.InsightEcho.response.MenuResp;
-import com.InsightEcho.response.MenuTreeResp;
-import com.InsightEcho.response.UserMenuResp;
-import org.apache.ibatis.annotations.Mapper;
+import com.InsightEcho.model.vo.response.MenuOptionResp;
+import com.InsightEcho.model.vo.query.MenuQuery;
+import com.InsightEcho.model.vo.request.MenuReq;
+import com.InsightEcho.model.vo.response.MenuResp;
+import com.InsightEcho.model.vo.response.MenuTreeResp;
+import com.InsightEcho.model.vo.response.UserMenuResp;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
-@Mapper
+/**
+ * ClassName:MenuMapper
+ * Package:com.InsightEcho.mapper
+ * Description:菜单 Mapper
+ *
+ * @Author:mind-king
+ * @Create:2024/7/2 - 上午9:59
+ * @Version:v1.0
+ */
+@Repository
 public interface MenuMapper extends BaseMapper<Menu> {
 
     /**
@@ -59,5 +68,5 @@ public interface MenuMapper extends BaseMapper<Menu> {
      * @param menuId 菜单id
      * @return 菜单
      */
-    MenuResp selectMenuById(@Param("menuId") Integer menuId);
+    MenuReq selectMenuById(@Param("menuId") Integer menuId);
 }

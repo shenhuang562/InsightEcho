@@ -1,14 +1,25 @@
 package com.InsightEcho.entity;
 
-import com.baomidou.mybatisplus.annotation.*;
+import com.baomidou.mybatisplus.annotation.FieldFill;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import java.time.LocalDateTime;
-
+/**
+ * ClassName:ExceptionLog
+ * Package:com.InsightEcho.entity
+ * Description:异常日志
+ *
+ * @Author:mind-king
+ * @Create:2024/6/30 - 下午11:34
+ * @Version:v1.0
+ */
 @Data
-@TableName("t_exception_log")
-public class ExceptionLog {
+public class ExceptionLog
+{
     /**
      * 异常id
      */

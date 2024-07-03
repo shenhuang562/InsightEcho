@@ -22,19 +22,9 @@ public enum UploadModeEnum {
     LOCAL("local", "localUploadStrategyImpl"),
 
     /**
-     * oss
-     */
-    OSS("oss", "ossUploadStrategyImpl"),
-
-    /**
      * cos
      */
-    COS("cos", "cosUploadStrategyImpl"),
-
-    /**
-     * qiniu
-     */
-    QINIU("qiniu", "qiniuUploadStrategyImpl");
+    COS("cos", "cosUploadStrategyImpl");
 
     /**
      * 模式

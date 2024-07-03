@@ -14,7 +14,7 @@ import static com.InsightEcho.enums.StatusCodeEnum.FAIL;
  * @Version:v1.0
  */
 @Getter
-public class ServiceException extends RuntimeException {
+public final class ServiceException extends RuntimeException {
     /*
     返回失败状态码
      */
@@ -25,7 +25,8 @@ public class ServiceException extends RuntimeException {
      */
     private final String message;
 
-    public ServiceException(String message) {
+    public ServiceException(String message)
+    {
         this.message = message;
     }
 

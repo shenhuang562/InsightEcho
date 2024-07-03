@@ -1,18 +1,28 @@
 package com.InsightEcho.entity;
 
-import com.baomidou.mybatisplus.annotation.*;
+import com.baomidou.mybatisplus.annotation.FieldFill;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
-
+/**
+ * ClassName:Comment
+ * Package:com.InsightEcho.entity
+ * Description:评论
+ *
+ * @Author:mind-king
+ * @Create:2024/7/2 - 下午10:28
+ * @Version:v1.0
+ */
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@TableName("t_comment")
 public class Comment {
     /**
      * 评论id
@@ -21,7 +31,7 @@ public class Comment {
     private Integer id;
 
     /**
-     * 类型 (1文章 2友链 3说说)
+     * 类型 (1文章  2说说)
      */
     private Integer commentType;
 

@@ -1,19 +1,28 @@
 package com.InsightEcho.entity;
 
-import com.baomidou.mybatisplus.annotation.*;
+import com.baomidou.mybatisplus.annotation.FieldFill;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
-
-
+/**
+ * ClassName:Aritcle
+ * Package:com.InsightEcho.entity
+ * Description:文章
+ *
+ * @Author:mind-king
+ * @Create:2024/7/2 - 下午9:42
+ * @Version:v1.0
+ */
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@TableName("t_article")
 public class Article {
 
     /**

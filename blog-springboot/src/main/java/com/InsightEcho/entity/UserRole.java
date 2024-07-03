@@ -2,18 +2,25 @@ package com.InsightEcho.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
+/**
+ * ClassName:UserRole
+ * Package:com.InsightEcho.entity
+ * Description:用户角色
+ *
+ * @Author:mind-king
+ * @Create:2024/6/30 - 下午11:50
+ * @Version:v1.0
+ */
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@TableName("t_user_role")
 public class UserRole {
+
     /**
      * 主键
      */
@@ -29,5 +36,4 @@ public class UserRole {
      * 角色id
      */
     private String roleId;
-
 }

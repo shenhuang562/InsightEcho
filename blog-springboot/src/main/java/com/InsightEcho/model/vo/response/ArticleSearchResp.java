@@ -2,20 +2,24 @@ package com.InsightEcho.model.vo.response;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
-
-import java.time.LocalDateTime;
+import lombok.NoArgsConstructor;
 /**
  * ClassName:ArticleSearchResp
  * Package:com.InsightEcho.model.vo.response
- * Description:文章归档Response
+ * Description:文章搜索Response
  *
  * @Author:mind-king
  * @Create:2024/7/1 - 下午8:46
  * @Version:v1.0
  */
 @Data
-@ApiModel(description = "文章归档Response")
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@ApiModel(description = "文章搜索Response")
 public class ArticleSearchResp {
     /**
      * 文章id
@@ -24,20 +28,26 @@ public class ArticleSearchResp {
     private Integer id;
 
     /**
-     * 标题
+     * 文章标题
      */
-    @ApiModelProperty(value = "标题")
+    @ApiModelProperty(value = "文章标题")
     private String articleTitle;
 
     /**
-     * 文章缩略图
+     * 文章内容
      */
-    @ApiModelProperty(value = "文章缩略图")
-    private String articleCover;
+    @ApiModelProperty(value = "文章内容")
+    private String articleContent;
 
     /**
-     * 发表时间
+     * 是否删除
      */
-    @ApiModelProperty(value = "发表时间")
-    private LocalDateTime createTime;
+    @ApiModelProperty(value = "是否删除")
+    private Integer isDelete;
+
+    /**
+     * 文章状态
+     */
+    @ApiModelProperty(value = "文章状态")
+    private Integer status;
 }

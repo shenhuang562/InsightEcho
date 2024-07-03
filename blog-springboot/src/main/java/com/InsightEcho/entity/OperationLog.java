@@ -1,16 +1,26 @@
 package com.InsightEcho.entity;
 
-import com.baomidou.mybatisplus.annotation.*;
+import com.baomidou.mybatisplus.annotation.FieldFill;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
-
+/**
+ * ClassName:OperationLog
+ * Package:com.InsightEcho.entity
+ * Description:操作日志
+ *
+ * @Author:mind-king
+ * @Create:2024/6/30 - 下午11:37
+ * @Version:v1.0
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@TableName("t_operation_log")
 public class OperationLog {
     /**
      * 操作id

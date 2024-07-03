@@ -2,17 +2,26 @@ package com.InsightEcho.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.InsightEcho.entity.Article;
-import com.InsightEcho.query.ArticleConditionQuery;
-import com.InsightEcho.query.ArticleQuery;
-import com.InsightEcho.query.PageQuery;
-import com.InsightEcho.response.*;
-import org.apache.ibatis.annotations.Mapper;
+import com.InsightEcho.model.vo.query.ArticleConditionQuery;
+import com.InsightEcho.model.vo.query.ArticleQuery;
+import com.InsightEcho.model.vo.query.PageQuery;
+import com.InsightEcho.model.vo.response.*;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
+
 import java.util.List;
-
-
-@Mapper
+/**
+ * ClassName:ArticleMapper
+ * Package:com.InsightEcho.mapper
+ * Description:文章 Mapper
+ *
+ * @Author:mind-king
+ * @Create:2024/7/2 - 下午9:43
+ * @Version:v1.0
+ */
+@Repository
 public interface ArticleMapper extends BaseMapper<Article> {
+
     /**
      * 查询后台文章数量
      *
