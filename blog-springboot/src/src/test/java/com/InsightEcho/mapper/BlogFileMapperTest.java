@@ -4,13 +4,11 @@ import com.InsightEcho.entity.BlogFile;
 import com.InsightEcho.model.vo.query.FileQuery;
 import com.InsightEcho.model.vo.response.FileResp;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class BlogFileMapperTest {
     @Autowired
@@ -21,7 +19,7 @@ class BlogFileMapperTest {
             .fileName("test")
             .fileSize(1024)
             .extendName("jpg")
-            .filePath("test")
+            .filePath("noTest")
             .isDir(1)
             .build();
 
