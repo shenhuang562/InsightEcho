@@ -1,13 +1,21 @@
 package com.InsightEcho.mapper;
 
-import com.InsightEcho.entity.RoleMenu;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import org.apache.ibatis.annotations.Mapper;
+import com.InsightEcho.entity.RoleMenu;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
-@Mapper
+/**
+ * ClassName:RoleMenuMapper
+ * Package:com.InsightEcho.mapper
+ * Description:角色菜单 Mapper
+ *
+ * @Author:mind-king
+ * @Create:2024/7/3 - 上午9:22
+ * @Version:v1.0
+ */
+@Repository
 public interface RoleMenuMapper extends BaseMapper<RoleMenu> {
 
     /**

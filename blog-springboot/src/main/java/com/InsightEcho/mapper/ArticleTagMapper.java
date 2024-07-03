@@ -1,13 +1,21 @@
 package com.InsightEcho.mapper;
 
-import com.InsightEcho.entity.ArticleTag;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import org.apache.ibatis.annotations.Mapper;
+import com.InsightEcho.entity.ArticleTag;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
-@Mapper
+/**
+ * ClassName:ArticleTagMapper
+ * Package:com.InsightEcho.mapper
+ * Description:文章标签 Mapper
+ *
+ * @Author:mind-king
+ * @Create:2024/7/3 - 上午9:56
+ * @Version:v1.0
+ */
+@Repository
 public interface ArticleTagMapper extends BaseMapper<ArticleTag> {
 
     /**

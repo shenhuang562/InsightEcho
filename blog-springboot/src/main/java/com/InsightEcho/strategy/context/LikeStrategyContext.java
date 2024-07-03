@@ -3,6 +3,7 @@ package com.InsightEcho.strategy.context;
 import com.InsightEcho.enums.LikeTypeEnum;
 import com.InsightEcho.strategy.LikeStrategy;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.Map;
 
@@ -15,6 +16,7 @@ import java.util.Map;
  * @Create:2024/7/1 - 下午8:38
  * @Version:v1.0
  */
+@Service
 public class LikeStrategyContext {
     @Autowired
     private Map<String, LikeStrategy> likeStrategyMap;

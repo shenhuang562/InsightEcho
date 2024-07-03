@@ -10,7 +10,15 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
-
+/**
+ * ClassName:Photo
+ * Package:com.InsightEcho.entity
+ * Description: 照片
+ *
+ * @Author:mind-king
+ * @Create:2024/7/3 - 上午9:39
+ * @Version:v1.0
+ */
 @Data
 @Builder
 @NoArgsConstructor

@@ -1,17 +1,25 @@
 package com.InsightEcho.mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.InsightEcho.entity.Tag;
 import com.InsightEcho.model.vo.query.TagQuery;
 import com.InsightEcho.model.vo.response.TagBackResp;
 import com.InsightEcho.model.vo.response.TagOptionResp;
 import com.InsightEcho.model.vo.response.TagResp;
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
-@Mapper
+/**
+ * ClassName:TagMapper
+ * Package:com.InsightEcho.mapper
+ * Description:标签 Mapper
+ *
+ * @Author:mind-king
+ * @Create:2024/7/3 - 上午9:10
+ * @Version:v1.0
+ */
+@Repository
 public interface TagMapper extends BaseMapper<Tag> {
 
     /**

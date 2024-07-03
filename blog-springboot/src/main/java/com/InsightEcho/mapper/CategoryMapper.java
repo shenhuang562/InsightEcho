@@ -1,16 +1,24 @@
 package com.InsightEcho.mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.InsightEcho.entity.Category;
 import com.InsightEcho.model.vo.query.CategoryQuery;
 import com.InsightEcho.model.vo.response.CategoryBackResp;
 import com.InsightEcho.model.vo.response.CategoryResp;
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
-@Mapper
+/**
+ * ClassName:CategoryMapper
+ * Package:com.InsightEcho.mapper
+ * Description:分类 Mapper
+ *
+ * @Author:mind-king
+ * @Create:2024/7/3 - 上午9:08
+ * @Version:v1.0
+ */
+@Repository
 public interface CategoryMapper extends BaseMapper<Category> {
 
     /**

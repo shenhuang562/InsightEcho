@@ -1,16 +1,24 @@
 package com.InsightEcho.mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.InsightEcho.entity.Photo;
 import com.InsightEcho.model.vo.query.PhotoQuery;
 import com.InsightEcho.model.vo.response.PhotoBackResp;
 import com.InsightEcho.model.vo.response.PhotoResp;
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
-@Mapper
+/**
+ * ClassName:PhotoMapper
+ * Package:com.InsightEcho.mapper
+ * Description:照片 Mapper
+ *
+ * @Author:mind-king
+ * @Create:2024/7/3 - 上午9:40
+ * @Version:v1.0
+ */
+@Repository
 public interface PhotoMapper extends BaseMapper<Photo> {
 
     /**

@@ -10,7 +10,15 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
-
+/**
+ * ClassName:Message
+ * Package:com.InsightEcho.entity
+ * Description:留言
+ *
+ * @Author:mind-king
+ * @Create:2024/7/3 - 上午9:14
+ * @Version:v1.0
+ */
 @Data
 @Builder
 @NoArgsConstructor

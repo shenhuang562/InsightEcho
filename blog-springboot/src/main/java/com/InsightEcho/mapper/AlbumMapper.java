@@ -1,17 +1,25 @@
 package com.InsightEcho.mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.InsightEcho.entity.Album;
 import com.InsightEcho.model.vo.query.AlbumQuery;
 import com.InsightEcho.model.vo.request.AlbumReq;
 import com.InsightEcho.model.vo.response.AlbumBackResp;
 import com.InsightEcho.model.vo.response.AlbumResp;
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
-@Mapper
+/**
+ * ClassName:AlbumMapper
+ * Package:com.InsightEcho.mapper
+ * Description:相册 Mapper
+ *
+ * @Author:mind-king
+ * @Create:2024/7/3 - 上午9:40
+ * @Version:v1.0
+ */
+@Repository
 public interface AlbumMapper extends BaseMapper<Album> {
 
     /**

@@ -1,16 +1,24 @@
 package com.InsightEcho.mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.InsightEcho.entity.Message;
 import com.InsightEcho.model.vo.query.MessageQuery;
 import com.InsightEcho.model.vo.response.MessageBackResp;
 import com.InsightEcho.model.vo.response.MessageResp;
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
-@Mapper
+/**
+ * ClassName:MessageMapper
+ * Package:com.InsightEcho.mapper
+ * Description:留言 Mapper
+ *
+ * @Author:mind-king
+ * @Create:2024/7/3 - 上午9:13
+ * @Version:v1.0
+ */
+@Repository
 public interface MessageMapper extends BaseMapper<Message> {
 
     /**
