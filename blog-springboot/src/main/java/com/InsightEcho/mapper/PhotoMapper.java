@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 /**
- * ClassName:PhotoMapper
+ * ClassName:PhotoMapper.xml
  * Package:com.InsightEcho.mapper
  * Description:照片 Mapper
  *
