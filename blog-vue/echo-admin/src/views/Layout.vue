@@ -4,6 +4,8 @@ import {
     Promotion,
     UserFilled,
     User,
+    HomeFilled,
+    Histogram,
     Crop,
     EditPen,
     SwitchButton,
@@ -16,6 +18,13 @@ let router = useRouter()
 const exit = ()=>{
     router.push('/login')
 }
+const navigateTo = (path) => {
+  router.push(path);
+};
+// 判断当前路由是否匹配给定路径
+const isActiveRoute = (path) => {
+  return router.currentRoute.value.path === path;
+};
 </script>
 
 <template>
@@ -27,40 +36,55 @@ const exit = ()=>{
                 <h2>InsightEcho</h2>
             </div>
             <!-- 菜单标签 -->
-            <el-menu active-text-color="#ffd04b" background-color="#232323"  text-color="#fff"
-                router>
-                <el-menu-item index="/article/category">
+            <el-menu  background-color="#232323"  text-color="#fff" router>
+                <el-menu-item index="/home" :class="{'is-active' : isActiveRoute('/home')}">
+                    <el-icon>
+                        <HomeFilled />
+                    </el-icon>
+                    <span>主页</span>
+                </el-menu-item>
+
+                <el-sub-menu index="article">
+                    <template #title>
+                        <el-icon>
+                            <Histogram />
+                        </el-icon>
+                        <span>文章管理</span>
+                    </template>
+                    <el-menu-item index="/article/write" :class="{'is-active' : isActiveRoute('/article/write')}">
+                        <el-icon>
+                            <Promotion />
+                        </el-icon>
+                        <span>文章发布</span>
+                    </el-menu-item>
+                    <el-menu-item index="/article/list" :class="{'is-active' : isActiveRoute('/article/list')}">
                     <el-icon>
                         <Management />
                     </el-icon>
-                    <span>文章分类</span>
+                    <span>文章列表</span>
                 </el-menu-item>
-                <el-menu-item index="/article/manage">
-                    <el-icon>
-                        <Promotion />
-                    </el-icon>
-                    <span>文章管理</span>
-                </el-menu-item>
-                <el-sub-menu >
+                </el-sub-menu>
+ 
+                <el-sub-menu index="user">
                     <template #title>
                         <el-icon>
                             <UserFilled />
                         </el-icon>
                         <span>个人中心</span>
                     </template>
-                    <el-menu-item index="/user/info">
+                    <el-menu-item index="/user/info" :class="{'is-active' : isActiveRoute('/user/info')}">
                         <el-icon>
                             <User />
                         </el-icon>
                         <span>基本资料</span>
-                    </el-menu-item index="/user/avatar">
-                    <el-menu-item >
+                    </el-menu-item >
+                    <el-menu-item index="/user/avatar" :class="{'isactive' : isActiveRoute('/user/avatar')}">
                         <el-icon>
                             <Crop />
                         </el-icon>
                         <span>更换头像</span>
                     </el-menu-item>
-                    <el-menu-item index="/user/password">
+                    <el-menu-item index="/user/password" :class="{'is-active' : isActiveRoute('/user/password')}">
                         <el-icon>
                             <EditPen />
                         </el-icon>
@@ -84,10 +108,18 @@ const exit = ()=>{
                     </span>
                     <template #dropdown>
                         <el-dropdown-menu>
-                            <el-dropdown-item command="profile" :icon="User">基本资料</el-dropdown-item>
-                            <el-dropdown-item command="avatar" :icon="Crop">更换头像</el-dropdown-item>
-                            <el-dropdown-item command="password" :icon="EditPen">重置密码</el-dropdown-item>
-                            <el-dropdown-item command="logout" :icon="SwitchButton" @click="exit">退出登录</el-dropdown-item>
+                            <el-dropdown-item command="profile" :icon="User" @click="navigateTo('/user/info')">
+                                基本资料
+                            </el-dropdown-item>
+                            <el-dropdown-item command="avatar" :icon="Crop" @click="navigateTo('/user/avatar')">
+                                更换头像
+                            </el-dropdown-item>
+                            <el-dropdown-item command="password" :icon="EditPen" @click="navigateTo('/user/password')">
+                                重置密码
+                            </el-dropdown-item>
+                            <el-dropdown-item command="logout" :icon="SwitchButton" @click="exit">
+                                退出登录
+                            </el-dropdown-item>
                         </el-dropdown-menu>
                     </template>
                 </el-dropdown>
@@ -119,6 +151,9 @@ const exit = ()=>{
 
         .el-menu {
             border-right: none;
+            .is-active {
+                color: #ffd04b ;
+            }
         }
     }
 
@@ -145,12 +180,17 @@ const exit = ()=>{
         }
     }
 
+    .el-main {
+        padding: 0 20px;
+    }
+    
     .el-footer {
         display: flex;
         align-items: center;
         justify-content: center;
         font-size: 14px;
         color: #666;
+        
     }
 }
 </style>
