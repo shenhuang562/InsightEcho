@@ -13,9 +13,6 @@ import java.util.List;
  * Package:com.InsightEcho.mapper
  * Description:评论Mapper
  *
- * @Author:mind-king
- * @Create:2024/7/2 - 下午10:29
- * @Version:v1.0
  */
 @Repository
 public interface CommentMapper extends BaseMapper<Comment> {

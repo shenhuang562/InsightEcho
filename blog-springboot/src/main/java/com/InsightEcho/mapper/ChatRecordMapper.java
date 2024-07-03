@@ -2,6 +2,7 @@ package com.InsightEcho.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.InsightEcho.entity.ChatRecord;
+import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 /**
  * ClassName:ChatRecordMapper
@@ -12,6 +13,6 @@ import org.springframework.stereotype.Repository;
  * @Create:2024/7/1 - 上午12:15
  * @Version:v1.0
  */
-@Repository
+@Mapper
 public interface ChatRecordMapper  extends BaseMapper<ChatRecord>{
 }
