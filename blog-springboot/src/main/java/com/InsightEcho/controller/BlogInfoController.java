@@ -61,15 +61,4 @@ public class BlogInfoController {
         return Result.success(blogInfoService.getBlogBackInfo());
     }
 
-    /**
-     * 查看关于我信息
-     *
-     * @return {@link Result<String>} 关于我信息
-     */
-    @VisitLogger(value = "关于")
-    @ApiOperation(value = "查看关于我信息")
-    @GetMapping("/about")
-    public Result<String> getAbout() {
-        return Result.success(blogInfoService.getAbout());
-    }
 }

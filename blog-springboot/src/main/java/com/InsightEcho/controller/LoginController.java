@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * ClassName:LoginController
  * Package:com.InsightEcho.controller
- * Description:
+ * Description:登录控制器
  *
  * @Author:mind-king
  * @Create:2024/7/3 - 下午2:39

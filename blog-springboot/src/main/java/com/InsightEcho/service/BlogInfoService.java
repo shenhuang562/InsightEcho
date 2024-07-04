@@ -148,11 +148,6 @@ public class BlogInfoService {
         return blogBackInfoResp;
     }
 
-    public String getAbout() {
-        SiteConfig siteConfig = redisService.getObject(RedisConstant.SITE_SETTING);
-        return siteConfig.getAboutMe();
-    }
-
     /**
      * 查询文章排行
      *

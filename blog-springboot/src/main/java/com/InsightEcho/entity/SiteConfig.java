@@ -53,11 +53,6 @@ public class SiteConfig {
     private String siteIntro;
 
     /**
-     * 网站公告
-     */
-    private String siteNotice;
-
-    /**
      * 建站日期
      */
     private String createSiteTime;
@@ -76,11 +71,6 @@ public class SiteConfig {
      * 文章默认封面
      */
     private String articleCover;
-
-    /**
-     * 关于我
-     */
-    private String aboutMe;
 
     /**
      * Github

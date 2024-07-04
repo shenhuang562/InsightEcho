@@ -19,7 +19,7 @@ public class RedisConstant {
     /**
      * 验证码过期时间
      */
-    public static final Integer CODE_EXPIRE_TIME = 2;
+    public static final Integer CODE_EXPIRE_TIME = 10;
 
     /**
      * 文章浏览量

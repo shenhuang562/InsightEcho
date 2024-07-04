@@ -98,23 +98,30 @@ public class LoginService {
                 .eq(User::getUsername, register.getUsername()));
         Assert.isNull(user, "邮箱已注册！");
         SiteConfig siteConfig = redisService.getObject(RedisConstant.SITE_SETTING);
+        Assert.notNull(siteConfig, "未能获取站点配置信息，请稍后重试或联系管理员！");
         // 添加用户
-        User newUser = User.builder()
-                .username(register.getUsername())
-                .email(register.getUsername())
-                .nickname(CommonConstant.USER_NICKNAME + IdWorker.getId())
-                .avatar(siteConfig.getUserAvatar())
-                .password(SecurityUtils.sha256Encrypt(register.getPassword()))
-                .loginType(LoginTypeEnum.EMAIL.getLoginType())
-                .isDisable(CommonConstant.FALSE)
-                .build();
-        userMapper.insert(newUser);
-        // 绑定用户角色
-        UserRole userRole = UserRole.builder()
-                .userId(newUser.getId())
-                .roleId(RoleEnum.USER.getRoleId())
-                .build();
-        userRoleMapper.insert(userRole);
+        try {
+            User newUser = User.builder()
+                    .username(register.getUsername())
+                    .email(register.getUsername())
+                    .nickname(CommonConstant.USER_NICKNAME + IdWorker.getId())
+                    .avatar(siteConfig.getUserAvatar())
+                    .password(SecurityUtils.sha256Encrypt(register.getPassword()))
+                    .loginType(LoginTypeEnum.EMAIL.getLoginType())
+                    .isDisable(CommonConstant.FALSE)
+                    .build();
+            userMapper.insert(newUser);
+            // 绑定用户角色
+            UserRole userRole = UserRole.builder()
+                    .userId(newUser.getId())
+                    .roleId(RoleEnum.USER.getRoleId())
+                    .build();
+            userRoleMapper.insert(userRole);
+        }catch (Exception e) {
+            // 异常处理，记录日志
+            System.err.println("创建用户时发生异常：" + e.getMessage());
+            throw new RuntimeException("创建用户时发生异常：" + e.getMessage(), e);
+        }
     }
 
     @Transactional(rollbackFor = Exception.class)

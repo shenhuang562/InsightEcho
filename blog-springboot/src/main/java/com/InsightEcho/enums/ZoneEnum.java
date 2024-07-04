@@ -16,7 +16,7 @@ import lombok.Getter;
 public enum ZoneEnum {
 
     /**
-     * 武汉
+     * 上海
      */
     SHANGHAI("Asia/Shanghai", "中国上海");
 
