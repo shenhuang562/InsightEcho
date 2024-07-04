@@ -30,7 +30,7 @@ import static com.InsightEcho.constant.OptTypeConstant.UPDATE;
 /**
  * 评论控制器
  *
- * @author InsightEcho
+ * @author mindking
  **/
 @Api(tags = "评论模块")
 @RestController

@@ -23,8 +23,8 @@ import static com.InsightEcho.constant.OptTypeConstant.*;
 /**
  * 相册控制器
  *
- * @author ican
- * @date 2022/12/29 22:10
+ * @author mindking
+ * @date 2024/07/04 22:10
  **/
 @Api(tags = "相册模块")
 @RestController

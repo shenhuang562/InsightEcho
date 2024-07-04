@@ -24,8 +24,8 @@ import java.util.List;
 /**
  * 轮播图控制器
  *
- * @author ican
- * @date 2024/02/03 12:02
+ * @author mindking
+ * @date 2024/07/03 12:02
  **/
 @Api(tags = "轮播图模块")
 @RestController

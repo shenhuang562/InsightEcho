@@ -26,8 +26,8 @@ import static com.InsightEcho.constant.OptTypeConstant.*;
 /**
  * 分类控制器
  *
- * @author ican
- * @date 2022/12/02 17:32
+ * @author mindking
+ * @date 2024/07/02 17:32
  **/
 @Api(tags = "分类模块")
 @RestController
