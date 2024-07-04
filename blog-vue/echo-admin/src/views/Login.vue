@@ -8,15 +8,12 @@ const isRegister = ref(false)
 const registerData = ref({
   username:'',
   password:'',
-  repassword:'',
 })
 
 // 校验密码函数
 const checkrepassword = (rule,value,callback) => {
   if(value===''){
     callback(new Error('请再次确认密码'))
-  }else if(value !== registerData.value.password){
-    callback(new Error('请确保两次输入密码一致'))
   }else{
     callback()
   }
@@ -26,14 +23,11 @@ const checkrepassword = (rule,value,callback) => {
 const rules={
   username:[
     {required:true,message:'请输入用户名',trigger:'blur'},
-    {min:3,max:16,message:'长度为5~16位非空字符',trigger:'blur'},
+    {min:2,max:20,message:'长度为2~20位非空字符',trigger:'blur'},
   ],
   password:[
     {required:true,message:'请输入密码',trigger:'blur'},
-    {min:3,max:16,message:'长度为5~16位非空字符',trigger:'blur'},
-  ],
-  repassword:[
-    {validator:checkrepassword,trigger:'blur'}
+    {min:2,max:20,message:'长度为2~20位非空字符',trigger:'blur'},
   ],
 }
 
@@ -50,7 +44,6 @@ const clearRegisterData = ()=>{
     registerData.value={
         username:'',
         password:'',
-        repassword:'',
     }
 }
 
@@ -60,34 +53,8 @@ const clearRegisterData = ()=>{
     <el-row class="login-page">
         <el-col :span="12" class="bg"></el-col>
         <el-col :span="6" :offset="3" class="form">
-            <!-- 注册表单 -->
-            <el-form ref="form" size="large" autocomplete="off" v-if="isRegister" :model='registerData' :rules='rules'>
-                <el-form-item>
-                    <h1>注册</h1>
-                </el-form-item>
-                <el-form-item prop="username">
-                    <el-input :prefix-icon="User" placeholder="请输入用户名" v-model="registerData.username"></el-input>
-                </el-form-item>
-                <el-form-item prop="password">
-                    <el-input :prefix-icon="Lock" type="password" placeholder="请输入密码" v-model="registerData.password"></el-input>
-                </el-form-item>
-                <el-form-item prop="repassword">
-                    <el-input :prefix-icon="Lock" type="password" placeholder="请输入再次密码" v-model="registerData.repassword"></el-input>
-                </el-form-item>
-                <!-- 注册按钮 -->
-                <el-form-item>
-                    <el-button class="button" type="primary" auto-insert-space>
-                        注册
-                    </el-button>
-                </el-form-item>
-                <el-form-item class="flex">
-                    <el-link type="info" :underline="false" @click="isRegister = false;clearRegisterData()">
-                        ← 返回
-                    </el-link>
-                </el-form-item>
-            </el-form>
             <!-- 登录表单 -->
-            <el-form ref="form" size="large" autocomplete="off" v-else :model="registerData" :rules="rules">
+            <el-form ref="form" size="large" autocomplete="off" :model="registerData" :rules="rules">
                 <el-form-item>
                     <h1>登录</h1>
                 </el-form-item>
@@ -100,11 +67,6 @@ const clearRegisterData = ()=>{
                 <!-- 登录按钮 -->
                 <el-form-item>
                     <el-button class="button" type="primary" auto-insert-space @click="login">登录</el-button>
-                </el-form-item>
-                <el-form-item class="flex">
-                    <el-link type="info" :underline="false" @click="isRegister = true;clearRegisterData()">
-                        注册 →
-                    </el-link>
                 </el-form-item>
             </el-form>
         </el-col>
